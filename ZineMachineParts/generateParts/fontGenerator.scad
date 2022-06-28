@@ -56,7 +56,7 @@ module row(){
     for(idx = [ 0 : len(list) - 1 ] ){
         translate([0,0,idx*(letter_width+2)]) letter(list[idx]);
     }
-    if(connecting_ridge = true){
+    if(connecting_ridge == true){
         translate([(8*row_count)/2-1.5,((7.85-.5)/2),((len(list)-1)*(letter_width+2))/2]) cube([1,.5,len(list)*(letter_width+2)], center = true);
         translate([-((8*row_count)/2-1.5),((7.85-.5)/2),((len(list)-1)*(letter_width+2))/2]) cube([1,.5,len(list)*(letter_width+2)], center = true);
     }
